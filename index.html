@@ -172,7 +172,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2021-06-30 01:27:33 / 修改时间：01:28:53" itemprop="dateCreated datePublished" datetime="2021-06-30T01:27:33+08:00">2021-06-30</time>
+              <time title="创建时间：2021-06-30 01:27:33 / 修改时间：01:33:15" itemprop="dateCreated datePublished" datetime="2021-06-30T01:27:33+08:00">2021-06-30</time>
             </span>
 
           
@@ -186,15 +186,15 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h4 id="flannel-的三种网络模式"><a href="#flannel-的三种网络模式" class="headerlink" title="flannel 的三种网络模式:"></a>flannel 的三种网络模式:</h4><pre><code>- 基于隧道
+          <h3 id="flannel-的三种网络模式"><a href="#flannel-的三种网络模式" class="headerlink" title="flannel 的三种网络模式:"></a>flannel 的三种网络模式:</h3><pre><code>- 基于隧道
     udp(用户态),vxlan（内核态）
 - 基于路由
     host-gw(基于路由)
 </code></pre>
-<h4 id="calico-的两种网络模式"><a href="#calico-的两种网络模式" class="headerlink" title="calico 的两种网络模式:"></a>calico 的两种网络模式:</h4><pre><code>- BGP（基于路由）
+<h3 id="calico-的两种网络模式"><a href="#calico-的两种网络模式" class="headerlink" title="calico 的两种网络模式:"></a>calico 的两种网络模式:</h3><pre><code>- BGP（基于路由）
 - ipip（基于隧道）
 </code></pre>
-<h2 id="方案区别："><a href="#方案区别：" class="headerlink" title="方案区别："></a>方案区别：</h2><ul>
+<h3 id="方案区别："><a href="#方案区别：" class="headerlink" title="方案区别："></a>方案区别：</h3><ul>
 <li><p>基于隧道</p>
 <p>  每台宿主机上都得有网络插件的agent 进程(flannel ，flex)，连接etcd 存储，从虚拟IP池申请一个IP 段占为己有。</p>
 <p>  不同宿主机容器间访问时，数据包需要通过agent 进程封装/解封，目的终端不知道中间的跳数信息，达到两端互通的感觉，隧道方案具备普适性。</p>
